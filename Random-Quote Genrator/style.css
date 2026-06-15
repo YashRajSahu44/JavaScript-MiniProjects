@@ -1,0 +1,318 @@
+:root {
+  --bg: #e6e3ec;
+  --card: #ffffff;
+  --ink: #15141a;
+  --yellow: #f8d568;
+  --purple: #b3abf2;
+  --muted: #8b8794;
+  --line: rgba(21, 20, 26, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  font-family: "Poppins", sans-serif;
+  padding: 24px;
+}
+
+.page {
+  width: 100%;
+  max-width: 980px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 32px;
+  border: 1px solid var(--line);
+  box-shadow: 0 30px 80px -25px rgba(21, 20, 26, 0.2);
+  padding: 36px 48px 40px;
+}
+
+/* ---------- Top bar ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.logo-mark {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: var(--yellow);
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  transform: rotate(15deg);
+}
+
+.top-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 0.85rem;
+}
+
+.top-links a {
+  text-decoration: none;
+  color: var(--muted);
+  transition: color 0.15s ease;
+}
+
+.top-links a:hover {
+  color: var(--ink);
+}
+
+.top-links a.active-link {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ---------- Category pills ---------- */
+.pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+
+.pill {
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  padding: 7px 18px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* ---------- Hero / quote section ---------- */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 30px 16px 56px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--yellow);
+  font-family: "Lora", serif;
+  font-size: 26px;
+  line-height: 1;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 2;
+}
+
+#quote {
+  font-family: "Lora", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1.6rem, 1rem + 3vw, 3rem);
+  line-height: 1.4;
+  max-width: 680px;
+  color: var(--ink);
+  margin: 0 auto 22px;
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+
+#quote.fade {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  background: var(--ink);
+  color: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 16px 42px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 6px 6px 0 var(--yellow);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+  z-index: 2;
+}
+
+button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--yellow);
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--yellow);
+}
+
+/* ---------- Decorative shapes ---------- */
+.shape {
+  position: absolute;
+  border: 3px solid var(--ink);
+  z-index: 1;
+}
+
+.shape-1 {
+  top: 6px;
+  left: 6%;
+  width: 86px;
+  height: 86px;
+  background: var(--yellow);
+  border-radius: 18px;
+  box-shadow: 7px 7px 0 var(--ink);
+  transform: rotate(-12deg);
+}
+
+.shape-2 {
+  top: -6px;
+  right: 9%;
+  width: 60px;
+  height: 60px;
+  background: var(--purple);
+  border-radius: 14px;
+  box-shadow: 6px 6px 0 var(--ink);
+  transform: rotate(18deg);
+}
+
+.shape-3 {
+  bottom: 18px;
+  left: 13%;
+  width: 46px;
+  height: 46px;
+  background: var(--purple);
+  border-radius: 8px;
+  box-shadow: 5px 5px 0 var(--ink);
+  transform: rotate(45deg);
+}
+
+.shape-4 {
+  bottom: -8px;
+  right: 6%;
+  width: 78px;
+  height: 78px;
+  background: var(--yellow);
+  border-radius: 16px;
+  box-shadow: 7px 7px 0 var(--ink);
+  transform: rotate(-10deg);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.news {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ef4444;
+  margin-right: 8px;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
+.socials a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.socials a:hover {
+  color: var(--purple);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .card {
+    padding: 26px 22px 28px;
+    border-radius: 24px;
+  }
+
+  .topbar {
+    margin-bottom: 28px;
+  }
+
+  .pills {
+    margin-bottom: 40px;
+    gap: 8px;
+  }
+
+  .pill {
+    padding: 6px 14px;
+    font-size: 0.75rem;
+  }
+
+  .hero {
+    min-height: 220px;
+    padding: 16px 6px 36px;
+  }
+
+  .shape-1 { width: 56px; height: 56px; left: 0; }
+  .shape-2 { width: 42px; height: 42px; right: 2%; }
+  .shape-3 { display: none; }
+  .shape-4 { width: 50px; height: 50px; right: 0; }
+
+  .footer {
+    justify-content: center;
+    text-align: center;
+  }
+}
